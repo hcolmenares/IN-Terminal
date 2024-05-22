@@ -71,9 +71,28 @@ p {
   font-size: 1.4rem;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 /* Fin Globales */
 
 /* Inicio Generales */
+
+#terminal {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--primary);
+  overflow-y: scroll;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
 
 .row {
   display: flex;
@@ -110,23 +129,32 @@ p {
   border-bottom: 0.5rem solid var(--primary);
 }
 
-#terminal {
+.option {
+  transition: 0.3s ease-in-out;
+  padding: 0.5rem;
+}
+
+.option:hover {
+  font-weight: 600;
+  background: var(--primary);
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.option.disabled {
+  color: var(--dark-primary);
+}
+
+.option.disabled:hover {
+  background: var(--dark-primary);
+  color: var(--secondary);
+}
+
+#player-name {
   width: 100%;
-  height: 100%;
-  padding: 2rem;
-  font-size: 2rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background: var(--black);
   color: var(--primary);
-  overflow-y: scroll;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-#loading-message span {
-  animation: load 3s steps(5, end) infinite;
-}
-
-@keyframes load {
-  100% {
-    opacity: 1;
-  }
 }
